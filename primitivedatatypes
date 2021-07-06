@@ -1,0 +1,33 @@
+using System;
+
+namespace primitivedatatypes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            byte number= 2;
+            short number1 = 3;
+            int number2 = 4;
+            long number3 = 55L;
+            double number4 = 7.9D;
+            float number5 = 3.7F;
+            decimal number6 = 7.9M;
+            char alpha= 'A';
+            bool iscorrect= true;
+            Console.WriteLine(number);
+            Console.WriteLine(number1);
+            Console.WriteLine(number2);
+            Console.WriteLine(number3);
+            Console.WriteLine(number4);
+            Console.WriteLine(number5);
+            Console.WriteLine(number6);
+            Console.WriteLine(alpha);
+            Console.WriteLine(iscorrect);
+
+
+
+
+        }
+    }
+}
