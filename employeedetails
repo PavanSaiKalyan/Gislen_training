@@ -1,0 +1,22 @@
+using System;
+
+namespace employeedetails
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string empid,salary,name;
+            Console.WriteLine("Enter the employee id:");
+            empid = Console.ReadLine();
+            Console.WriteLine("Enter the name of employee:");
+            name = Console.ReadLine();
+            Console.WriteLine("Enter the salary of emplyee:");
+            salary = Console.ReadLine();
+            Console.WriteLine(Convert.ToInt32(empid));
+            Console.WriteLine(name);
+            Console.WriteLine(Convert.ToInt32(salary));
+
+        }
+    }
+}
