@@ -1,0 +1,16 @@
+C:\Training\sumof\obj\Debug\net5.0\sumof.csproj.AssemblyReference.cache
+C:\Training\sumof\obj\Debug\net5.0\sumof.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\sumof\obj\Debug\net5.0\sumof.AssemblyInfoInputs.cache
+C:\Training\sumof\obj\Debug\net5.0\sumof.AssemblyInfo.cs
+C:\Training\sumof\obj\Debug\net5.0\sumof.csproj.CoreCompileInputs.cache
+C:\Training\sumof\bin\Debug\net5.0\sumof.exe
+C:\Training\sumof\bin\Debug\net5.0\sumof.deps.json
+C:\Training\sumof\bin\Debug\net5.0\sumof.runtimeconfig.json
+C:\Training\sumof\bin\Debug\net5.0\sumof.runtimeconfig.dev.json
+C:\Training\sumof\bin\Debug\net5.0\sumof.dll
+C:\Training\sumof\bin\Debug\net5.0\ref\sumof.dll
+C:\Training\sumof\bin\Debug\net5.0\sumof.pdb
+C:\Training\sumof\obj\Debug\net5.0\sumof.dll
+C:\Training\sumof\obj\Debug\net5.0\ref\sumof.dll
+C:\Training\sumof\obj\Debug\net5.0\sumof.pdb
+C:\Training\sumof\obj\Debug\net5.0\sumof.genruntimeconfig.cache

@@ -1,0 +1,16 @@
+C:\Training\divof\bin\Debug\net5.0\divof.exe
+C:\Training\divof\bin\Debug\net5.0\divof.deps.json
+C:\Training\divof\bin\Debug\net5.0\divof.runtimeconfig.json
+C:\Training\divof\bin\Debug\net5.0\divof.runtimeconfig.dev.json
+C:\Training\divof\bin\Debug\net5.0\divof.dll
+C:\Training\divof\bin\Debug\net5.0\ref\divof.dll
+C:\Training\divof\bin\Debug\net5.0\divof.pdb
+C:\Training\divof\obj\Debug\net5.0\divof.csproj.AssemblyReference.cache
+C:\Training\divof\obj\Debug\net5.0\divof.GeneratedMSBuildEditorConfig.editorconfig
+C:\Training\divof\obj\Debug\net5.0\divof.AssemblyInfoInputs.cache
+C:\Training\divof\obj\Debug\net5.0\divof.AssemblyInfo.cs
+C:\Training\divof\obj\Debug\net5.0\divof.csproj.CoreCompileInputs.cache
+C:\Training\divof\obj\Debug\net5.0\divof.dll
+C:\Training\divof\obj\Debug\net5.0\ref\divof.dll
+C:\Training\divof\obj\Debug\net5.0\divof.pdb
+C:\Training\divof\obj\Debug\net5.0\divof.genruntimeconfig.cache
