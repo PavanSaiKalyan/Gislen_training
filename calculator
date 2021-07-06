@@ -1,0 +1,35 @@
+using System;
+
+namespace calculator
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double a,b;
+            char op;
+            Console.WriteLine("Enter first number:");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter second number:");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the operation:");
+            op= Convert.ToChar(Console.ReadLine());
+            if (op == '+')
+                Console.WriteLine("{0}+{1} ={2}",a,b,a+b);
+            else if (op == '-')
+                Console.WriteLine("{0} - {1} = {2}",a,b,a-b);
+            else if(op == '*')
+                Console.WriteLine("{0} * {1} = {2}",a,b,a*b);
+            else if(op == '/')
+                Console.WriteLine("{0} / {1} = {2}",a,b,a/b);
+            else
+                Console.WriteLine("Invalid operator");       
+
+            
+            
+            
+            
+            
+        }
+    }
+}
