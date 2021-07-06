@@ -1,0 +1,21 @@
+using System;
+
+namespace diffdatetypescalc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int num1 = 3;
+            decimal num2 =4M;
+            float num3 = 3.2F;
+            float num4 = 4.6F;
+            var sum = num1 + num2;
+            var div = num2/num1;
+            var pro = num3 * num4;
+            var str = "Sum is " +sum+ "division is  " + div+ "  product is " + pro+ ".";
+            Console.WriteLine(str);
+
+        }
+    }
+}
