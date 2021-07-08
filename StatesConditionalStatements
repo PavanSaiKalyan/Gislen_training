@@ -1,0 +1,30 @@
+using System;
+
+namespace StatesConditionalstatements
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string countryName;
+            string state;
+            Console.WriteLine("Enter the name of the country:");
+            countryName = Console.ReadLine();
+            Console.WriteLine("Enter the state in country:");
+            state = Console.ReadLine();
+            if (countryName== "India" || countryName=="INDIA")
+            {
+                if(state == "Kerala" || state== "kerala")
+                {
+                    Console.WriteLine("True");
+                }
+
+            }
+            else
+            {
+                Console.WriteLine("False");
+            }
+        }
+    }
+}
