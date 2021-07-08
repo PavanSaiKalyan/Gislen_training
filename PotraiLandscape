@@ -1,0 +1,27 @@
+using System;
+
+namespace PotraitLandscape
+{
+    class Program
+    {
+        enum imagedimensions:int
+        {
+              height,
+              width
+        }
+        static void Main(string[] args)
+        {
+
+            int imageHeight = (int)imagedimensions.height;
+            Console.WriteLine("Enter height of image:");
+            imageHeight = Convert.ToInt32 (Console.ReadLine());
+            int imageWidth = (int)imagedimensions.width;
+            Console.WriteLine("Enter the width of image:");
+            imageWidth = Convert.ToInt32(Console.ReadLine());
+            var result=imageWidth > imageHeight ? "Image is a Landscape" : "Image is a potrait";
+            Console.WriteLine(result);
+            
+
+        }
+    }
+}
