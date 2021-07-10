@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace PostLikes
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var myList = new List<string>();
+            Console.WriteLine("Enter the names:");
+            var s = Console.ReadLine();
+            myList = s.Split(" ").ToList();
+            if(myList.Count>2)
+            {
+                Console.WriteLine($"{myList[0]},{myList[1]} and others liked your post");
+            }
+            else if (myList.Count==2)
+            {
+                Console.WriteLine($"{myList[0]} and {myList[1]} liked your post");
+
+            }
+            else if (myList.Count==1)
+            {
+                Console.WriteLine($"{myList[0]} likes your post");
+            }
+            else
+            {
+                Console.WriteLine("");
+            }
+
+        }
+    }
+}
