@@ -1,0 +1,35 @@
+using System;
+
+namespace TimeVerifier
+{
+    class Program
+    {
+        public static bool isValidTime(int hour, int min)
+        {
+            if ((hour >= 0 && min <= 59) || (hour <= 23 && min >= 59))
+            {
+                return (true);
+            }
+            else
+            {
+                return (false);
+            }
+        }
+
+        private static void Main(string[] args)
+        {
+            Console.WriteLine("enter time in hours:");
+            int hour = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter time in minutes:");
+            int min = Convert.ToInt32(Console.ReadLine());
+            bool answer = isValidTime(hour, min);
+            Console.WriteLine(answer);
+
+        }
+    }
+}
+
+
+
+
+        
