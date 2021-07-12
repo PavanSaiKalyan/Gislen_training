@@ -1,0 +1,28 @@
+using System;
+
+namespace ConsoleApp3
+{
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            double number;
+            Console.WriteLine("Enter the decimal number that to be converted into GPS:");
+            number = Convert.ToDouble(Console.ReadLine());
+            int degrees = Convert.ToInt32(Math.Truncate(number));
+          
+            var result = number - degrees;
+            var temp = result * 60;
+            int minutes = Convert.ToInt32(Math.Truncate(temp));
+            result = temp - minutes;
+            temp = result * 60;
+            int seconds = Convert.ToInt32(Math.Truncate(temp));
+            Console.WriteLine($"Gps value in{degrees}degree {minutes}minutes {seconds}seconds ");
+            
+
+
+
+        }
+    }
+}
