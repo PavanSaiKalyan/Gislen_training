@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Graphmovement
+{
+    class Graph
+    {
+        int x, y, z;
+
+        public Graph(int x, int y, int z)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        public void move(int x,int y,int z)
+        {
+            this.x = x;
+            this.y = y;
+            this.z = z;
+        }
+
+        public void move(Graph graph)
+        {
+            this.x = graph.x;
+            this.y = graph.y;
+            this.z = graph.z;
+            
+        }
+        public void Printgraph()
+        {
+            Console.WriteLine($"The new positions are {x},{y},{z}", x, y, z);
+        }
+       
+
+    }
+}
+
+using System;
+
+namespace Graphmovement
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("enter the x coordinate:");
+            int x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the y coordinate:");
+            int y = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("enter the z coordinate:");
+            int z = Convert.ToInt32(Console.ReadLine());
+
+            Graph mygraph = new Graph(x,y,z);
+            mygraph.move(x,y,z);
+
+
+            
+        }
+    }
+}
