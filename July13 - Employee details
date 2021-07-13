@@ -1,0 +1,92 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EmployeeProfile
+{
+    public class EmployeeDetails
+    {
+        public double EmployeeId;
+        public string Name;
+        public string Designation;
+        private double _salary;
+
+        public double Salary
+        {
+             get { return _salary; }
+             set { _salary = value; }
+
+        }
+        public void GetSalary( double newsalary)
+        {
+             newsalary = _salary;
+            Console.WriteLine("The current salary is :", newsalary);
+
+        }
+        private double IncreasePay(double _salary)
+        {
+            var final_salary = _salary + (0.1 * _salary);
+            return final_salary;
+            Console.WriteLine(final_salary);
+        }
+
+       
+
+        public void Promote(bool ispromotion)
+        {
+            if (ispromotion = true)
+            {
+                Console.WriteLine(IncreasePay(_salary));
+            }
+            else
+            {
+
+                Console.WriteLine(Salary);
+            }
+
+                    
+        }
+        public void SetSalary(double newsalary)
+        {
+            _salary = newsalary;
+            Console.WriteLine(newsalary);
+        }
+
+       
+    }
+}
+using EmployeeProfile;
+using System;
+
+namespace Employee
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the name of employee:");
+            string name=Console.ReadLine();
+            Console.WriteLine("Enter the id of employee:");
+            double Id = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the designation of employee:");
+            string des = Console.ReadLine();
+
+            EmployeeDetails employee = new EmployeeDetails();
+            name = employee.Name;
+            Id = employee.EmployeeId;
+            des = employee.Designation;
+            Console.WriteLine("Is the employee is getting promoted:");
+            bool review = Convert.ToBoolean(Console.ReadLine());
+            employee.Promote(review);
+            
+
+
+
+
+
+
+        }
+    }
+}
