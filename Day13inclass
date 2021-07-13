@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace Demo
+{
+    public class Student
+    {
+        public string StudentName;
+        public int Id;
+        private double _fees;
+
+        public Student(int id,string studentName)
+        {
+            this.Id = id;
+            this.StudentName = studentName;
+
+        }
+  using System;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var student = new Student(24,"Tarun");
+            student.Setfees(20000);
+
+        }
+    }
+}
+      private double Totalfees(double donation)
+        {
+            var totalFees = _fees + donation;
+            return totalFees;
+        }
+        public void Setfees(double fees)
+        {
+            _fees = fees;
+            
+            Console.WriteLine(Totalfees(10000));
+        }
+
+
+
+    }
+}
+using System;
+
+namespace Demo
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var student = new Student(24,"Tarun");
+            student.Setfees(20000);
+
+        }
+    }
+}
