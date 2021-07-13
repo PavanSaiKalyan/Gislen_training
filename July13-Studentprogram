@@ -1,0 +1,62 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Program3
+{
+    class Student
+    {
+        public double Id;
+        public string name;
+        public DateTime birthdate;
+        public DateTime Age
+        {
+
+            get
+            {
+                return Age;
+            }
+            set
+            {
+                var dob1 = DateTime.Now;
+                
+                var Age = dob1.Year - birthdate.Year;
+                Age = Convert.ToInt32(value);
+                Console.WriteLine(Age);
+            }
+
+
+
+
+
+
+        }
+    }
+}
+using System;
+
+namespace Program3
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the name of student:");
+            string nameOfStudent = Console.ReadLine();
+            Console.WriteLine("Enter the student id:");
+            double studentId = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the date of birth:");
+            DateTime dob = Convert.ToDateTime(Console.ReadLine());
+            Student student = new Student();
+            student.Id = studentId;
+            student.name = nameOfStudent;
+            student.Age = dob;
+            Console.WriteLine(dob);
+
+            
+        }
+    }
+}
+
