@@ -1,0 +1,62 @@
+using System;
+
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp5
+{
+    class Fibo
+    {
+        public  int Fibonaccii(int n)
+        {
+            if (n == 0)
+
+                return 0;
+
+            else if (n == 1)
+
+                return 1;
+            else
+                return Fibonaccii(n - 1) + Fibonaccii(n - 2);
+
+
+        }
+    }
+}
+using System;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+            Console.WriteLine("Enter a number for fibonaccii series:");
+            int n = Convert.ToInt32(Console.ReadLine());
+            Fibo fibs = new Fibo();
+            for(int i=0;i<n;i++)
+            {
+                Console.Write(fibs.Fibonaccii(i));
+            }
+           }
+           }
+}
+
+             
+
+          
+             
+      
+
+            
+
+            
+
+
+
+
+
+    
+
