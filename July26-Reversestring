@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp6
+{
+    class ReverseString
+    {
+        public  void  printReverse(string s)
+        {
+            if (s.Length > 0)
+                printReverse(s.Substring(0, s.Length - 1));
+            else
+                Console.Write(s[0]);
+                
+                
+
+        }
+    }
+}
+using System;
+
+namespace ConsoleApp6
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ReverseString revs = new ReverseString();
+            Console.WriteLine("Enter the string to be reversed:");
+            string s = Console.ReadLine();
+            Console.WriteLine(revs.printReverse(s));
+
+        }
+    }
+}
