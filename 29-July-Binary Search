@@ -1,0 +1,42 @@
+using System;
+
+namespace BSA
+{
+    class Program
+    {
+       public static int BinarySearch(int min,int max,int num,int [] arr)
+        {
+            if(min>=1)
+            {
+               int  mid = 1 + (min - 1) / 2;
+                if (arr[mid] == num)
+                {
+                    return mid;
+
+
+                }
+                else if (arr[mid] > num)
+                {
+                    return BinarySearch(min, mid - 1, num, arr);
+
+
+
+
+                }
+                else 
+                    return BinarySearch(mid + 1, max, num, arr)
+                    
+            }
+        }
+
+       public  static void Main(string[] args)
+        {
+            int[] arr = { 1, 2, 3, 4, 5, 6, 7, 89, 109, 23 };
+            Console.WriteLine("Enter the element to search :");
+            int num = Convert.ToInt32(Console.ReadLine());
+            var result = BinarySearch(1, 23, num, arr);
+            Console.WriteLine("The elemet is found at ", +result);
+            
+        }
+    }
+}
