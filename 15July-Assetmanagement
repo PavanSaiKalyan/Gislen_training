@@ -1,0 +1,81 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp7
+{
+    public abstract class  Asset
+    {
+        public abstract void Configuration(string a, string b);
+        
+
+        
+
+
+
+        public  void Warranty()
+        {
+            Console.WriteLine("The warranty will be upto 3 years.");
+        }
+        
+    }
+}
+
+    class Dockstation:Asset
+    {
+        public override void Configuration(string pintype,string inputtype)
+        {
+            Console.WriteLine($"The pin type of dockingstation is {pintype} and the input type it takes is{inputtype}");
+
+        }
+class Laptop:Asset
+    {
+        public  override void Configuration(string screensize,string graphic)
+        {
+            Console.WriteLine($"The screensize is{screensize} and the graphics type is{graphic}");
+        }
+    }
+    class Computer:Asset
+    {
+        public override void Configuration(string ram, string processor)
+        {
+            Console.WriteLine($"The ram in the computer is{ram} and  the processor is { processor}");
+        }
+    }
+     class Monitor:Asset
+    {
+        public override void Configuration(string refreshrate, string type)
+        {
+            Console.WriteLine($"The screensize is{refreshrate} and the graphics type is{type}");
+        }
+
+    }
+    class Mouse:Asset
+    {
+        public override void Configuration(string tracktype, string mousetype)
+        {
+            Console.WriteLine($"The screensize is{tracktype} and the graphics type is{mousetype}");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Asset pccomponents;
+            pccomponents = new Dockstation();
+            pccomponents.Configuration("3pin", "5watt");
+            pccomponents = new Laptop();
+            pccomponents.Configuration("15.6inches", "Nvidia");
+            pccomponents = new Monitor();
+            pccomponents.Configuration("120Hz", "4k");
+            pccomponents = new Mouse();
+            pccomponents.Configuration("wireless", "gaming");
+            pccomponents.Warranty();
+
+
+
+
+        }
+    
