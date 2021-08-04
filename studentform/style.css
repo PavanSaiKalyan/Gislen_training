@@ -1,0 +1,16 @@
+.input {
+    margin-top: 20px;
+}
+
+#address {
+    width: 20%;
+}
+
+.DisplayDetails {
+    margin-top: 5%;
+}
+
+body {
+    background-color: cadetblue;
+    text-align: center;
+}

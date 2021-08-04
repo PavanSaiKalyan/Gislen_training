@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Personal Data</title>
+    <script src="./script.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+
+</head>
+
+<body>
+    <h1>Student Personal Data</h1>
+    <div class="input">
+        <label> Name of student:</label>
+        <input type="text" name="fullname" id="fullname" />
+
+    </div>
+    <div class="input">
+        <label>Gender:</label>
+        <input type="radio" name="gender" id="gender" />
+        <label>male</label>
+        <input type="radio" name="gender" id="gender" />
+        <label>female</label>
+        <input type="radio" name="gender" id="gender" />
+        <label>others</label>
+
+    </div>
+    <div class="input">
+        <label>Date of birth(dd/mm/yyyy):</label>
+        <input type="date" id="dateofbirth">
+
+    </div>
+    <div class="input">
+        <label>Email address:</label>
+        <input type="email" name="email" id="email" />
+    </div>
+    <div class="input">
+        <label>Permanent Address:</label>
+        <input type="text" maxlength="150" id="address" />
+    </div>
+
+    <div> <button onclick="StudentInformation()">Submit</button></div>
+
+    <div class="displaydetails" id="student">
+        <button onclick="DisplayDetails()">display details of student</button>
+
+    </div>
+
+
+</body>
+
+</html>
