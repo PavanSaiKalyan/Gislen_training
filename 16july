@@ -1,0 +1,211 @@
+using System;
+
+namespace _16_july_21
+{
+class baseclass
+    {
+        public void WriteNum()
+        {
+            System.Console.WriteLine("base class integer: " + 10);
+        }
+        public virtual void Writestr()
+        {
+            System.Console.WriteLine("base class string");
+        }
+    }
+    lass DematAcc : Salaryacc
+    {
+        private string panCardNum;
+
+        public DematAcc(string Accountnum, string Name, double Balance, string pancardnum) : base(Accountnum, Name, Balance)
+        {
+            this.panCardNum = pancardnum;
+        }
+        public string validatePan()
+        {
+            Regex regex = new Regex(@"[A-Z]{5}[0-9]{4}[A-Z]{1}");
+            return regex.IsMatch(panCardNum) ? "Valid" : "Not valid";
+        }
+        public void getSalaryWithDemat()
+        {
+            base.getSalary();
+            Console.WriteLine("Your PAN ID is: {0}", validatePan());
+        }
+    }
+    class derivedclass : baseclass
+    {
+        public new void WriteNum()
+        {
+            Console.WriteLine("derived class string");
+        }
+
+        public override void Writestr()//overriding the base class method
+        {
+            base.Writestr();
+        }
+    }
+    static class dueDate
+    {
+        public static double GetDueDays(this Insurance IObj)
+        {
+            DateTime dueDate = IObj.payPremium();//Extended method to find the days left
+            double daysLeft = (dueDate - DateTime.Now).TotalDays;
+            return daysLeft;
+        }
+    }
+    class Insurance
+    {
+        public string Name { get; set; }
+        public string Email { get; set; }
+        public DateTime PremiumDueDate { get; set; }
+        public string AadharNum { get; set; }
+
+        public DateTime payPremium()//setting the days to pay for premium
+        {
+            PremiumDueDate = DateTime.Today.AddDays(15);
+            return PremiumDueDate;
+        }
+    }
+
+    //validation class
+    class Validate : Insurance
+    {
+        public string valid_name;
+        public string valid_email;
+        public string valid_aadharNum;
+        public void validation()
+        {
+            //Name validation using regular expression
+            Console.WriteLine("Enter the Name:");
+            Name = Console.ReadLine();
+            Regex regName = new Regex(@"^[A-Za-z]\w{3,20}$");
+            this.valid_name = regName.IsMatch(Name) ? "valid name" : "not a valid name";
+
+            //Email validation using regular expression
+            Console.WriteLine("Enter the Email ID:");
+            Email = Console.ReadLine();
+            Regex regEmail = new Regex(@"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$");
+            this.valid_email = regEmail.IsMatch(Email) ? "valid mail" : "not a valid Email";
+
+            //Aadhar number validation using regular expression
+            Console.WriteLine("Enter Your Aadhar number:");
+            AadharNum = Console.ReadLine();
+            Regex regAadharNUm = new Regex(@"^[2-9]{1}[0-9]{3}\\s[0-9]{4}\\s[0-9]{4}$");
+            this.valid_aadharNum = regAadharNUm.IsMatch(AadharNum) ? "a valid number" : "not a valid num";
+        }
+        public void print_validation()//printing the details
+        {
+            Insurance insurance = new Insurance();
+            int _date = Convert.ToInt32(insurance.GetDueDays());
+            Console.WriteLine($"Name: {Name} is a {valid_name}\nEmail: {Email} is a {valid_email}\nyour Aadhar number: {AadharNum} is {valid_aadharNum}\nDue Date for premium: {_date} days left...");
+        }
+    }
+    class Salaryacc
+    {
+        private string Accountnum;
+        private string Name;
+        private double Balance;
+
+        //constructor to get and store the salary account details.
+        public Salaryacc(string Accountnum, string Name, double Balance)
+        {
+            this.Accountnum = Accountnum;
+            this.Name = Name;
+            this.Balance = Balance;
+        }
+        public void getSalary()//checking the length of the account number
+        {
+            if (Accountnum.Length < 16)
+            {
+                Console.WriteLine("Your account number is invalid");
+            }
+            else
+            {
+                Console.WriteLine($"your salary account detail...\nAcc No: {Accountnum}\nName:{Name}\nBalance:{Balance}");
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //1.Create a Base Class with a method with the name WriteNum and display an integer.  
+            //Create another virtual method WriteStr and display some string.
+            //Create a Derived class and create a hidden method by name WriteNum and override the method WriteStr. 
+            //Create Objects -
+            //-objectA  of type base class 
+            //- objectB of type  base class but downcasted to the derived class 
+            //- objectC of type derived class 
+            //Display the methods from all 3 objects
+
+
+            baseclass objA = new baseclass();//base class object
+            objA.WriteNum();
+            objA.Writestr();
+            baseclass objB = new derivedclass(); // base class downcasted to derived class
+            derivedclass derivedObj = objB as derivedclass;
+            derivedObj.WriteNum();
+            derivedObj.Writestr();
+            derivedclass objc = new derivedclass();//derived class object
+            objc.WriteNum();
+            objc.Writestr();
+
+
+            //2.Create a base class SalaryAccount , when creating the account you must pass the fields 
+            //like account Id, Name , Balance
+            //Create a derived class DematAccount, when creating a demat account you must and should pass the Pan Card number. 
+            //Try using the Regular expressions which you learnt in self learning to validate the pan card number  format. 
+            //User should be able to create 
+            //- SalaryAccount alone
+            //-  Salary Account along with the DematAccount
+
+            Console.WriteLine("your type:\n1.Salary Account Alone\n2.Salary Account with Demat Account");
+            int usertype = Convert.ToInt32(Console.ReadLine());
+            string account_number;
+            string name;
+            double balance;
+            switch (usertype)
+            {
+                case 1:
+                    Console.WriteLine("Enter Acc No: ");
+                    account_number = Console.ReadLine();
+                    Console.WriteLine("Your Name:");
+                    name = Console.ReadLine();
+                    Console.WriteLine("Your balance:");
+                    balance = Convert.ToDouble(Console.ReadLine());
+                    Salaryacc salaryacc = new Salaryacc(account_number, name, balance);
+                    salaryacc.getSalary();
+                    break;
+                case 2:
+                    Console.WriteLine("Enter Acc No: ");
+                    account_number = Console.ReadLine();
+                    Console.WriteLine("Your Name:");
+                    name = Console.ReadLine();
+                    Console.WriteLine("Your balance:");
+                    balance = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Enter Your PAN ID:");
+                    string panCardNum = Console.ReadLine();
+                    DematAcc dematAcc = new DematAcc(account_number, name, balance, panCardNum);
+                    dematAcc.getSalaryWithDemat();
+                    break;
+                default:
+                    Console.WriteLine("Sorry its an Invalid input");
+                    break;
+            }
+
+            //3. Extension methodCreate a class called Insurance, Add some methods like Pay premium.  
+            //Have few properties like name, email,  Premium Due Date,  aadhar card number.  
+            //Before creating an object, validate all inputs using the c# regular expressions.
+            //Create an extension method called GetDueDays which accepts the Insurance object  and 
+            //returns the number of days pending to pay premium or number of days exceeded.
+
+            Validate validate = new Validate();
+            validate.validation();
+            validate.print_validation();
+
+            Insurance insurance = new Insurance();
+            insurance.payPremium();
+
+
+        }
+    }
